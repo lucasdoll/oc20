@@ -1,6 +1,6 @@
 # Graphic editor
 
-### Description
+## Description
 
 Our graphic editor allows the user to:
 
@@ -12,22 +12,22 @@ Our graphic editor allows the user to:
 
 
 
-### shortcuts
+## shortcuts
 
-SHAPES
+#### SHAPES
 - S + T to import text
 - S + I to import images
 - S + R to draw rectangles
 - S + E to draw ellipse
 
-BACKGROUND:
+#### BACKGROUND:
 - B + O to change background color to orange
 - B + C to change background color to cyan
 - B + V to change background color to violet
 - B + R to change background color to red
 - B + D to change background color back to default
 
-SCREEN:
+#### SCREEN:
 - CMD + F for fullscreen (toggle)
 - CMD + G for windowed (toggle)
 - CMD + R for resizable (toggle)
