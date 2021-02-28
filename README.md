@@ -21,7 +21,13 @@ Notre editeur graphique:
 
 
 ## Interface
+
+Voici l'interface par défaut, sans aucune modification
+
 ![](img/screenshot1.png)
+
+Voici un exemple de ce qui peut être fait en utilisant les différents éléments de l'éditeur graphique
+
 ![](img/screenshot2.png)
 
 ## Raccourcis claviers
