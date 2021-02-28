@@ -1,8 +1,11 @@
 # Graphic editor
 
-## Description
+## Introduction
 
-L'éditeur graphique est le fruit de nombreuses heures de travail en collaboration en équipe et a été réalisé dans le cadre du projet d'OC.
+Un éditeur graphique permet de maninupler des objets, que ce soit des images importées, des objets dessinés, ou du text écrit. Nous pouvons ainsi dessiner des formes aux épaisseurs et aux couleurs diverses et les supprimer; importer des images, manipuler leur position et leur rotation; placer du text pré-choisi aux coordonnées voulues. 
+
+
+## Description
 
 Notre editeur graphique:
 
@@ -17,7 +20,11 @@ Notre editeur graphique:
 - permet la sauvegarde de l'éditeur si elle est voulue par l'utilisateur
 
 
-## shortcuts
+## Interface
+
+
+
+## Raccourcis claviers
 
 #### Arrière-plan
 - X change la couleur de l'arrière plan en Or
