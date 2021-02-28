@@ -21,8 +21,8 @@ Notre editeur graphique:
 
 
 ## Interface
-![alt text](https://github.com/lucasdoll/oc20/blob/img/screenshot1.png?raw=true)
-![alt text](https://github.com/lucasdoll/oc20/blob/img/screenshot2.png?raw=true)
+![](https://github.com/lucasdoll/oc20/blob/img/screenshot1.png?raw=true)
+![](https://github.com/lucasdoll/oc20/blob/img/screenshot2.png?raw=true)
 
 ## Raccourcis claviers
 
