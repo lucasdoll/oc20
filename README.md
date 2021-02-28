@@ -1,4 +1,4 @@
-## Graphic editor
+# Graphic editor
 
 ### Description
 
@@ -12,7 +12,7 @@ Our graphic editor allows the user to:
 
 
 
-### shortcuts:
+### shortcuts
 
 SHAPES
 - S + T to import text
