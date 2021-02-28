@@ -2,37 +2,63 @@
 
 ## Description
 
-Our graphic editor allows the user to:
+L'éditeur graphique est le fruit de nombreuses heures de travail en collaboration en équipe et a été réalisé dans le cadre du projet d'OC.
 
-- import text, images and shapes (rectangles and ellipses) with the ability to draw and edit them
-- change the color and the width of the shapes, change the color of the main background 
-- plays music
-- ability to chose whether or not to save the drawing or not
-- change the window display mode (fullscreen, resizable or windowed)
+Notre editeur graphique:
 
+- a une fenêtre aux dimensions réglables avec la souris
+- jouer de la musique en arrière plan grace au module mixer
+- permet d'importer des formes (rectangles, ellipses, et lignes) 
+- permet à l'utilisateur la modification de l'épaisseur et de la couleur de celles-ci 
+- permet à l'utilisateur de modifier la couleur de l'arrière plan
+- permet d'importer des images
+- permet à l'utilisateur de faire le déplacement et la rotation de celles-ci
+- permet de créer du text à des coordonnées choisies
+- permet la sauvegarde de l'éditeur si elle est voulue par l'utilisateur
 
 
 ## shortcuts
 
-#### SHAPES
-- S + T to import text
-- S + I to import images
-- S + R to draw rectangles
-- S + E to draw ellipse
+#### Arrière-plan
+- X change la couleur de l'arrière plan en Or
+- C change la couleur de l'arrière plan en Cyan
+- V change la couleur de l'arrière plan en Magenta
+- N change la couleur de l'arrière plan en Noir
+- B change la couleur de l'arrière plan en Blanc
+- M change la couleur de l'arrière plan en Marin
 
-#### BACKGROUND:
-- B + O to change background color to orange
-- B + C to change background color to cyan
-- B + V to change background color to violet
-- B + R to change background color to red
-- B + D to change background color back to default
 
-#### SCREEN:
-- CMD + F for fullscreen (toggle)
-- CMD + G for windowed (toggle)
-- CMD + R for resizable (toggle)
+#### Formes
+- R pour dessiner des rectangles
+- E pour dessiner des ellipses
+- L pour placer des points pour faire un polygone
+- 1 pour une épaisseur de 1 sur la prochaine forme dessinée
+- 2 pour une épaisseur de 3 sur la prochaine forme dessinée
+- 7 couleur rouge 
+- G couleur verte
+- 8 couleur bleu
 
-do not use another option before toggling off the option you just used!
+- ESC supprime la dernière forme déssinée
+
+#### Image
+- I pour importer une image (en précisant son emplacement et son extension)
+- Q commence le déplacement de l'image
+- Y arrête le déplacement de l'image
+- H commence la rotation de l'image
+- A arrête la rotation de l'image
+
+#### Texte
+- T demande le texte voulu et sa position (à écrire dans le terminal)
+
+#### Sauvegarde 
+- La sauvegarde se fait par l'écriture de "oui" ou de "non" à la fermeture du fichier
+
+
+
+
+
+
+
 
 
 
