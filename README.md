@@ -67,7 +67,9 @@ Voici un exemple de ce qui peut être fait en utilisant les différents élémen
 - La sauvegarde se fait par l'écriture de "oui" ou de "non" à la fermeture du fichier
 
 
+## Conclusion
 
+L'éditeur graphique que nous avons créé est le fruit de nombreuses heures de travail en collaboration proche, et le résultat cherché a été obtenu: nous avons fait un programme qui nous permet de dessiner plus ou moins ce que nous voulons!
 
 
 
