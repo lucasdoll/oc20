@@ -22,9 +22,20 @@ Notre editeur graphique:
 
 ## Interface
 
+Voici l'interface par défaut, sans aucune modification
 
+![](img/screenshot1.png)
+
+A l'aide de notre éditeur, nous pouvons faire des images simples
+
+![](img/screenshot2.png)
+
+Ou des images plus complexes comme celle-ci
+
+![](img/screenshot3.png)
 
 ## Raccourcis claviers
+
 
 #### Arrière-plan
 - X change la couleur de l'arrière plan en Or
@@ -60,8 +71,15 @@ Notre editeur graphique:
 #### Sauvegarde 
 - La sauvegarde se fait par l'écriture de "oui" ou de "non" à la fermeture du fichier
 
+### il est évident que la mémorisation de tous ces raccourcis n'est pas possible lorsque le programme est en exécution, une page de menu est donc disponible pour tous les afficher dans le programme-même avec la touche P
+
+![](img/screenshot4.png)
 
 
+
+## Conclusion
+
+L'éditeur graphique que nous avons créé est le fruit de nombreuses heures de travail en collaboration proche, et le résultat cherché a été obtenu: nous avons fait un programme qui nous permet de dessiner plus ou moins ce que nous voulons!
 
 
 
