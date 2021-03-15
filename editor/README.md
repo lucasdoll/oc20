@@ -42,8 +42,8 @@ Ou des images plus complexes comme celle-ci
 - C change la couleur de l'arrière plan en Cyan
 - V change la couleur de l'arrière plan en Magenta
 - N change la couleur de l'arrière plan en Noir
-- B change la couleur de l'arrière plan en Blanc
-- M change la couleur de l'arrière plan en Marin
+- W change la couleur de l'arrière plan en Blanc
+- B change la couleur de l'arrière plan en Bleu
 
 
 #### Formes
@@ -61,9 +61,15 @@ Ou des images plus complexes comme celle-ci
 #### Image
 - I pour importer une image (en précisant son emplacement et son extension)
 - Q commence le déplacement de l'image
-- Y arrête le déplacement de l'image
-- H commence la rotation de l'image
-- A arrête la rotation de l'image
+- Y rotation à gauche (10 degrés)
+- H rotation à droite (10 degrés)
+- D déplace l'image
+- Z agrandi l'image
+- P diminue l'image
+- F flip l'image de 180 degrés vers la droite
+- ALT + F flip l'image de 180 degrés vers la gauche
+- S arrête tous les mouvements
+- ESC supprime la dernière image
 
 #### Texte
 - T demande le texte voulu et sa position (à écrire dans le terminal)
@@ -71,7 +77,7 @@ Ou des images plus complexes comme celle-ci
 #### Sauvegarde 
 - La sauvegarde se fait par l'écriture de "oui" ou de "non" à la fermeture du fichier
 
-### il est évident que la mémorisation de tous ces raccourcis n'est pas possible lorsque le programme est en exécution, une page de menu est donc disponible pour tous les afficher dans le programme-même avec la touche P
+### il est évident que la mémorisation de tous ces raccourcis n'est pas possible lorsque le programme est en exécution, une page de menu est donc disponible pour tous les afficher dans le programme-même avec la touche M
 
 ![](img/screenshot4.png)
 
