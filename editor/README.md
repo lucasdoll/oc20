@@ -60,14 +60,13 @@ Ou des images plus complexes comme celle-ci
 
 #### Image
 - I pour importer une image (en précisant son emplacement et son extension)
-- Q commence le déplacement de l'image
 - Y rotation à gauche (10 degrés)
 - H rotation à droite (10 degrés)
 - D déplace l'image
 - Z agrandi l'image
 - P diminue l'image
-- F flip l'image de 180 degrés vers la droite
-- ALT + F flip l'image de 180 degrés vers la gauche
+- F flip l'image de 180 degrés 
+- ALT + F mirroire de l'image
 - S arrête tous les mouvements
 - ESC supprime la dernière image
 
