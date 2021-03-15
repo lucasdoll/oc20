@@ -89,5 +89,5 @@ ou bien même...
 
 ## Conclusion
 
-L'éditeur graphique que nous avons créé est le fruit de nombreuses heures de travail en collaboration proche, et le résultat cherché a été obtenu: nous avons fait un programme qui nous permet de dessiner plus ou moins ce que nous voulons!
+L'éditeur graphique que nous avons créé est le fruit de nombreuses heures de travail en collaboration proche, et le résultat cherché a été obtenu: nous avons fait un programme qui nous permet de dessiner plus ou moins ce que nous voulons.
 
