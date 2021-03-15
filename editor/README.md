@@ -36,7 +36,7 @@ Ou des images plus complexes comme celle-ci
 
 ou bien même...
 
-![](img/screenshot5.png)
+<img width="1414" alt="screenshot5" src="https://user-images.githubusercontent.com/77754959/111219230-1237a980-85d8-11eb-8782-f7890daf1e2e.png">
 
 
 ## Raccourcis claviers
@@ -89,5 +89,5 @@ ou bien même...
 
 ## Conclusion
 
-L'éditeur graphique que nous avons créé est le fruit de nombreuses heures de travail en collaboration proche, et le résultat cherché a été obtenu: nous avons fait un programme qui nous permet de dessiner plus ou moins ce que nous voulons.
+L'éditeur graphique que nous avons créé est le fruit de nombreuses heures de travail en collaboration proche, et le résultat cherché a été obtenu: nous avons fait un programme qui nous permet de dessiner plus ou moins ce que nous voulions.
 
