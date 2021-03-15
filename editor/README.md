@@ -34,6 +34,11 @@ Ou des images plus complexes comme celle-ci
 
 ![](img/screenshot3.png)
 
+ou bien même...
+
+![](img/screenshot5.png)
+
+
 ## Raccourcis claviers
 
 
