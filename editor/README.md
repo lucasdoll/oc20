@@ -83,7 +83,8 @@ ou bien même...
 
 ### il est évident que la mémorisation de tous ces raccourcis n'est pas possible lorsque le programme est en exécution, une page de menu est donc disponible pour tous les afficher dans le programme-même avec la touche M
 
-![](img/screenshot4.png)
+![sky copie](https://user-images.githubusercontent.com/77754959/111271376-64f17f80-8631-11eb-8b84-763f8eaf29f7.jpg)
+
 
 
 
