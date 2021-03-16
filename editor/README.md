@@ -28,11 +28,13 @@ Voici l'interface par défaut, sans aucune modification
 
 A l'aide de notre éditeur, nous pouvons faire des images simples
 
-![](img/screenshot2.png)
+<img width="729" alt="screenshot2" src="https://user-images.githubusercontent.com/77754959/111271710-dd584080-8631-11eb-84ed-15d124e58633.png">
 
 Ou des images plus complexes comme celle-ci
 
-![](img/screenshot3.png)
+<img width="1021" alt="screenshot3" src="https://user-images.githubusercontent.com/77754959/111271538-9cf8c280-8631-11eb-9e99-56ece8465424.png"><img width="729" 
+
+
 
 ou bien même...
 
