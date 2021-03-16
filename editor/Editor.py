@@ -15,7 +15,7 @@ clock = pygame.time.Clock()
 # initializing mixer for audio and music
 mixer.init()
 
-pygame.display.set_caption('Graphic Editor') # Naming the window
+pygame.display.set_caption('Graphic Editor') #Naming the window
 
 
 def play_music():
@@ -42,11 +42,13 @@ rect = Rect(0, 0, 640, 240)
 running = True
 
 
-screen = pygame.display.set_mode(rect.size, flags)
-
 # initialize Pygame and the window
 pygame.init() #initialize pygame
 
+#Titre et icone
+pygame.display.set_caption("Editeur Pygame")
+icon = pygame.image.load('Icon.png')
+pygame.display.set_icon(icon)
 
 # executing shortcuts function
  # Find the the key/mod combination in the dictionary and execute the cmd.
@@ -96,7 +98,7 @@ def pos_draw2(image):
 
 center = w // 2, h // 2
 Image_list = []
-
+image_config = None
 
 #settings before the draw
 angle = 0
@@ -135,7 +137,7 @@ if os.path.exists('sauvegarde_dessin') is True:
             bg = background.pop()
 
 
-
+# initialize menu
 menu = False
 while running:
 
@@ -178,57 +180,75 @@ while running:
             running = False
         if event.type == KEYDOWN:
 
-            # menu
-            if event.key == K_p:
+            # launch menu
+            if event.key == K_m:
                 menu = True
-
+                shapes = None
+            # import text
             if event.key == K_t:
-                print('ALT S')
                 texte_input = input('Veuillez insérer du texte:')
                 texte_pos_x = int(input('Vueillez donner la première cordonnée x:'))
                 texte_pos_y = int(input('Veuillez donner la seconde cordonnée y: '))
                 text_objet = Text(texte_input, pos=(texte_pos_x, texte_pos_y))
                 Text_list.append(text_objet)
                 shapes = 'text_delete'
-
-            if event.key == K_q:
+            # move image
+            if event.key == K_d:
                 movement = True
                 rotation = False
-                shapes = None
-
+                shapes = 'image_delete'
 
             # can stop the images' movement
-            elif event.key == K_y:
-                movement = False
-                rotation = False
-            # can rotate the image
-            elif event.key == K_h:
-                rotation = True
-                movement = False
-            # can stop the images' rotation
-            elif event.key == K_a:
-                rotation = False
+            elif event.key == K_s:
                 movement = False
 
+
+            # import image
             elif event.key == K_i:
-                image = input('Veuillez indiquer le chemin de votre image ainsi que son extension:')
-                #img_import = Image(image)
-                shapes = 'image_delete'
-                module = sys.modules['__main__']
-                path, name = os.path.split(module.__file__)
-                path = os.path.join(path, image)
-                img0 = pygame.image.load(path)
-                img0.convert()
-                rect0 = img0.get_rect()
-                img = img0
-                rect = img.get_rect()
-                rect.center = center
-                image_objet = Image(img, rect)
-                Image_list.append(image_objet)
+                image = Image()
+                image.load()
+                Image_list.append(image)
                 print(Image_list)
-                print(image_objet.rect, image_objet.image_finish)
+                shapes = 'image_delete'
+                image_config = True
 
-            if event.key == K_m:
+
+            # can rotate the image
+            if image_config is True:
+                image_rot = Image_list[-1]
+
+                #change angle
+                if event.key == K_y:
+                    image.angle += 10
+                    image_rot.img = pygame.transform.rotozoom(image_rot.img0, image_rot.angle, image_rot.scale)
+                    shapes = 'image_delete'
+
+                elif event.key == K_h :
+                    image.angle -= 10
+                    shapes = 'image_delete'
+                    image_rot.img = pygame.transform.rotozoom(image_rot.img0, image_rot.angle, image_rot.scale)
+
+                #rotation 1.1
+                elif event.key == K_p:
+                    image.scale /= 1.1
+                    image_rot.img = pygame.transform.rotozoom(image_rot.img0, image_rot.angle, image_rot.scale)
+                    shapes = 'image_delete'
+
+                elif event.key == K_z:
+                    image.scale *= 1.1
+                    image_rot.img = pygame.transform.rotozoom(image_rot.img0, image_rot.angle, image_rot.scale)
+                    shapes = 'image_delete'
+                # turn image
+                elif event.key == K_f and event.mod & KMOD_ALT:
+                    image_rot.img = pygame.transform.flip(image_rot.img, True, False)
+                    shapes = 'image_delete'
+
+                # flip image
+                elif event.key == K_f:
+                    image_rot.img = pygame.transform.flip(image_rot.img, False, True)
+                    shapes = 'image_delete'
+
+            if event.key == K_b:
                 bg = BLUE
             if event.key == K_x:
                 bg = GOLD
@@ -236,58 +256,54 @@ while running:
                 bg = CYAN
             if event.key == K_v:
                 bg = MAGENTA
-            if event.key == K_b:
+            if event.key == K_w:
                 bg = WHITE
             if event.key == K_n:
                 bg = BLACK
-                # create Rectangle
+            # create Rectangle
             if event.key == K_r:
                 shapes = Rectangle
             # create Ellipse
-            if event.key ==  K_e:
+            if event.key == K_e:
                 shapes = Ellipse
             # create polygon
             if event.key ==  K_l:
                 shapes = points
 
-            # delete polygon's point
+
             elif event.key == K_ESCAPE:
+                # delete polygon's point
                 if shapes == points:
                     if len(points) > 0:
                         points.pop()
+                # delete rectangle
                 elif shapes == Rectangle:
                     Rectangle.pop()
                 elif shapes == Ellipse:
                     Ellipse.pop()
-
+                # delete Image
                 elif shapes == 'image_delete':
                     Image_list.pop()
-
+                    image_config = False
+                # delete Text
                 elif shapes == 'text_delete':
                     Text_list.pop()
 
-
-            elif event.key == K_y:
-                running = False
-
             # widths' setting
-            elif event.key == K_0:
+            if event.key == K_0:
                 width = 0
-            elif event.key == K_1:
+            if event.key == K_1:
                 width = 1
-            elif event.key == K_2:
+            if event.key == K_2:
                 width = 3
             # colors' setting
-            elif event.key == K_7:
+            if event.key == K_7:
                 color = RED
-            elif event.key == K_g:
+            if event.key == K_g :
                 color = GREEN
-            elif event.key == K_8:
+            if event.key == K_8:
                 color = BLUE
-            elif event.key == K_9:
-                moving = True
-            elif event.key == K_p:
-                moving = False
+
 
         elif event.type == MOUSEBUTTONDOWN:
             if movement == True:
@@ -309,7 +325,7 @@ while running:
             elif shapes == points:
                 points.append(event.pos)
                 drawing = True
-                # engage the images' movement
+
 
 
         # stop drawing
@@ -318,17 +334,6 @@ while running:
             if movement == True:
                 moving = False
 
-        elif event.type == MOUSEMOTION and rotation is True:
-            mouse = event.pos
-            x = mouse[0] - center[0]
-            y = mouse[1] - center[1]
-            d = math.sqrt(x ** 2 + y ** 2)
-
-            angle = math.degrees(-math.atan2(y, x))
-            scale = abs(5 * d / w)
-            img = pygame.transform.rotozoom(img0, angle, scale)
-            rect = img.get_rect()
-            rect.center = center
 
         elif event.type == MOUSEMOTION and drawing:
                 # training the rectangle
@@ -344,9 +349,11 @@ while running:
                 # training the point's polygon
             elif shapes == points:
                     points[-1] = event.pos
-                    # move the image to the position of the mouse
-        elif event.type == MOUSEMOTION and moving is True:
-            rect.move_ip(event.rel)
+
+        # move the image to the position of the mouse
+        if event.type == MOUSEMOTION and moving is True:
+            image.rect.move_ip(event.rel)
+            pygame.draw.rect(screen, GREEN, image.rect, 1)
 
 
 
@@ -364,7 +371,7 @@ while running:
             text.blit()
 
         for image in Image_list:
-            screen.blit(image.image_finish, image.rect)
+            screen.blit(image.img, image.rect)
 
 
 

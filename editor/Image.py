@@ -13,24 +13,26 @@ Image_list = []
 #class Image
 class Image:
 
-    def __init__(self,image_finish, rect):
-        self.image_finish = image_finish
-        self.rect = rect
+    def __init__(self):
+        self.img0 = None
+        self.img = None
+        self.rect = None
+        self.file_name = None
+        self.scale = 1
+        self.angle = 0
 
-    def pos_image(self):
+    def load(self):
+        file_name = input('Indiquer le chemin de votre image avec extension:')
+        self.file_name = file_name
+
         module = sys.modules['__main__']
         path, name = os.path.split(module.__file__)
-
-
-        path = os.path.join(path, image)
+        path = os.path.join(path, file_name)
 
         img0 = pygame.image.load(path)
         img0.convert()
+        self.img0 = img0
 
-        rect0 = img0.get_rect()
-
-        center = w // 2, h // 2
-        img = img0
-        rect = img.get_rect()
-        rect.center = center
-        screen.blit(img, rect)
+        self.img = img0.copy()
+        self.rect = img0.get_rect()
+        self.rect.center = center
